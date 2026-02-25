@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial;
+
+            background: url("{{ url_for('static', filename='images/fraud_image.jpg') }}") no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-align: center;
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.75);
+            height: 100vh;
+            padding-top: 100px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #2c7dbf;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="overlay">
+
+    <h1>Online Payments Fraud Detection</h1>
+
+    <h2>Prediction Result:</h2>
+
+    <h3>{{ prediction_text }}</h3>
+
+    <br>
+
+    <a href="/">
+        <button class="btn">Home</button>
+    </a>
+
+</div>
+
+</body>
+</html>
